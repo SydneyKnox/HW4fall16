@@ -7,6 +7,9 @@
     = csrf_meta_tags
 
   <%= button_to "New", action: "new_user" %>
+  # => "<form method="post" action="/controller/new" class="button_to">
+  #      <input value="New" type="submit" />
+  #    </form>"
 
   %body
     %h1.title Rotten Potatoes!
