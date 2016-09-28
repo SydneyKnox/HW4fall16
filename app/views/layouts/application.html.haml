@@ -6,12 +6,15 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-  =button_to( "New", :action => "new_user")
   
 
   %body
     %h1.title Rotten Potatoes!
     #main
+      - if !@current_user
+        =button_to("SignUp/Log In", login_path, method: :get, :id => "signuplogin")
+      - else
+        =button_to("Log out", logout_path, method: :delete, :id => "logout")
       - if flash[:notice]
         #notice.message= flash[:notice]
       - elsif flash[:warning]

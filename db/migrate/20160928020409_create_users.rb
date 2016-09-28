@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :user_id
       t.string :email
-      t.string :session_id
+      t.string :session_token
       
       t.timestamps
     end
