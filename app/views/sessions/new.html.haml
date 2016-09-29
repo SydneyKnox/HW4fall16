@@ -8,5 +8,5 @@
   = label :user, :email, 'Email'
   = text_field :user, 'email', :id => 'login_email'
 
-  =button_to( "Log In", login_create_path, method: :post,:id => 'login_submit')
+  =button_to( "Log In", login_create_path, :method => :post,:id => 'login_submit')
   =link_to("Sign Up For an Account", users_path, :id => 'signup')

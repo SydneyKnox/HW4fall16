@@ -11,7 +11,7 @@ class UsersController < ApplicationController
         #@user = params[:user_id]
        if (User.exists?(:user_id => user_params[:user_id]))
            flash[:notice] = "user already created"
-           redirect_to login_create_path
+           redirect_to users_path
        else
         @user = User.create_user!(user_params)
         flash[:notice] = "Welcome #{user_params[:user_id]}!"
